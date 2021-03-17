@@ -1,6 +1,4 @@
-const deleteContent = (content) => {
-    document.getElementById(content.id).remove();
-}
+import { celcius, farenheit } from './calculations'
 
 const deletePreviousContent = (parent) => {
     while (parent.lastChild) {
@@ -10,8 +8,13 @@ const deletePreviousContent = (parent) => {
 
 
 const showWeather = (weather) => {
-    main = document.getElementById("main")
-    const weatherDiv = document.createElement('div')
+
+    const main = document.getElementById("main")
+    const weatherDiv = document.getElementById("weather-info")
+    weatherDiv.classList = 'container-fluid mx-0 my-4 border rounded'
+
+    deletePreviousContent(weatherDiv)
+
     const generalInfo = document.createElement('div')
     const tempHolder = document.createElement('div')
 
@@ -20,9 +23,9 @@ const showWeather = (weather) => {
     const location = document.createElement('h3')
     location.textContent = weather.location
     const weatherText = document.createElement('p')
-    weatherText.textContent = weather.weather
+    weatherText.textContent = `Current weather: ${weather.weather}`
     const weatherDescription = document.createElement('p')
-    weatherDescription.textContent = weather.weatherDescription
+    weatherDescription.textContent = `Description: ${weather.weatherDescription}`
 
 
     addClass([location, weatherText, weatherDescription], 'block')
@@ -37,8 +40,18 @@ const showWeather = (weather) => {
 
     addClass([temp, tempMax, tempMin], 'block')
 
+    const close = document.createElement('button')
+    close.type = 'button'
+    close.setAttribute('class', "btn-close close")
+    close.setAttribute("aria-label", "Close")
+
+    close.addEventListener('click', () => {
+        deletePreviousContent(weatherDiv)
+        weatherDiv.classList = 'container-fluid mx-0 my-4 border rounded'
+    })
+
     tempHolder.append(temp, tempMax, tempMin)
-    weatherDiv.append(tempHolder)
+    weatherDiv.append(close, generalInfo, tempHolder,)
     main.append(weatherDiv)
 }
 
@@ -48,3 +61,5 @@ const addClass = (array, addClass) => {
         element.class += addClass
     });
 }
+
+export { showWeather }

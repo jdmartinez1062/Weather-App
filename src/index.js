@@ -1,6 +1,6 @@
 import { celcius, farenheit } from "./calculations";
 import Weather from "./Weather"
-
+import { showWeather } from "./DOM"
 const getWeather = async city => {
     const API_KEY = "e88a6f60008b01493b86cacd829f692b";
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`, { mode: 'cors' })
@@ -8,7 +8,7 @@ const getWeather = async city => {
 
             response.json()
                 .then((response) => {
-                    console.log(new Weather(...objectBuilder(response)))
+                    showWeather(new Weather(...objectBuilder(response)))
                 })
         }).catch(function (err) {
             console.log(err)
@@ -32,9 +32,13 @@ const objectBuilder = (json) => {
 
 window.onload = () => {
     document.getElementById('search-button').addEventListener('click', () => {
-        city = document.getElementById('city').value
+
+        const cityField = document.getElementById('city')
+        const city = cityField.value
+
         getWeather(city)
+        // document.getElementById('search').classList.toggle('hide')
     })
-    document.getElementById('search').classList.toggle('hide')
+
 
 }
