@@ -17,20 +17,24 @@ const getWeather = async city => {
 
 const objectBuilder = (json) => {
     const mainJson = json.main
+    const weather = json.weather[0].main
+    const weatherDescription = json.weather[0].description
     const temp = mainJson.temp;
-    const temp_min = mainJson.temp_min
-    const temp_max = mainJson.temp_max
-    const feels_like = mainJson.feels_like
+    const tempMin = mainJson.temp_min
+    const tempMax = mainJson.temp_max
+    const feelsLike = mainJson.feels_like
     const humidity = mainJson.humidity
-    const sun_rise = new Date(json.sys.sunrise * 1000)
-    const sun_set = new Date(json.sys.sunset * 1000)
+    const sunRise = new Date(json.sys.sunrise * 1000)
+    const sunSet = new Date(json.sys.sunset * 1000)
     const location = json.name
-    return [location, temp, temp_min, temp_max, feels_like, humidity, sun_rise, sun_set]
+    return [location, weather, weatherDescription, temp, tempMin, tempMax, feelsLike, humidity, sunRise, sunSet]
 }
 
 window.onload = () => {
-
-    getWeather("Villavicencio")
+    document.getElementById('search-button').addEventListener('click', () => {
+        city = document.getElementById('city').value
+        getWeather(city)
+    })
 
 
 }

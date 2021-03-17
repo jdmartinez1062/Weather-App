@@ -1,15 +1,17 @@
 import { celcius, farenheit } from "./calculations";
 class Weather {
 
-    constructor(location, temp, temp_min, temp_max, temp_feel, humidity, sun_rise, sun_set) {
+    constructor(location, weather, weatherDescription, temp, tempMin, tempMax, tempFeel, humidity, sunRise, sunSet) {
         this.location = location
+        this.weather = weather
+        this.weatherDescription = weatherDescription
         this.temp = temp
-        this.temp_min = temp_min
-        this.temp_max = temp_max
-        this.temp_feel = temp_feel
+        this.temp_min = tempMin
+        this.temp_max = tempMax
+        this.temp_feel = tempFeel
         this.humidity = humidity
-        this.sun_rise = sun_rise
-        this.sun_set = sun_set
+        this.sun_rise = sunRise
+        this.sun_set = sunSet
     }
 
     tempInCelcius() {
