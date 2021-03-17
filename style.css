@@ -3,18 +3,22 @@ button.close {
   right: 2%;
   top: 6%;
 }
+
 p {
   margin: 0;
 }
+
 #btn-check {
   margin-left: 1rem !important;
 }
+
 #main-div {
   max-width: 50%;
   position: relative;
   top: 25%;
   left: 25%;
 }
+
 #weather-info {
   max-width: 50%;
   position: relative;
@@ -22,12 +26,15 @@ p {
   left: 25%;
   background-color: #f0f0f0;
 }
+
 label {
   max-width: 50%;
 }
+
 .hide {
   display: none;
 }
+
 body {
   background-color: white;
 }
