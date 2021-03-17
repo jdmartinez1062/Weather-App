@@ -35,6 +35,6 @@ window.onload = () => {
         city = document.getElementById('city').value
         getWeather(city)
     })
-
+    document.getElementById('search').classList.toggle('hide')
 
 }

@@ -2,9 +2,9 @@ import { celcius, farenheit } from "./calculations";
 class Weather {
 
     constructor(location, weather, weatherDescription, temp, tempMin, tempMax, tempFeel, humidity, sunRise, sunSet) {
-        this.location = location
-        this.weather = weather
-        this.weatherDescription = weatherDescription
+        this.location = capitalizeFirstLetter(location)
+        this.weather = capitalizeFirstLetter(weather)
+        this.weatherDescription = capitalizeFirstLetter(weatherDescription)
         this.temp = temp
         this.temp_min = tempMin
         this.temp_max = tempMax
@@ -21,6 +21,11 @@ class Weather {
         this.temp = farenheit(temp)
     }
 
+}
+
+
+const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export default Weather

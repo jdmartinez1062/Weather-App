@@ -8,12 +8,25 @@ const deletePreviousContent = (parent) => {
     }
 };
 
+
 const showWeather = (weather) => {
     main = document.getElementById("main")
     const weatherDiv = document.createElement('div')
+    const generalInfo = document.createElement('div')
     const tempHolder = document.createElement('div')
+
     tempHolder.id = "temp-holder"
 
+    const location = document.createElement('h3')
+    location.textContent = weather.location
+    const weatherText = document.createElement('p')
+    weatherText.textContent = weather.weather
+    const weatherDescription = document.createElement('p')
+    weatherDescription.textContent = weather.weatherDescription
+
+
+    addClass([location, weatherText, weatherDescription], 'block')
+    generalInfo.append(location, weatherText, weatherDescription)
 
     const temp = document.createElement('p')
     temp.textContent = `Current Temperature: ${weather.temp}`
@@ -21,12 +34,17 @@ const showWeather = (weather) => {
     tempMax.textContent = `Maximum Temperature: ${weather.temp_max}`
     const tempMin = document.createElement('p')
     tempMin.textContent = `Minimum Temperature: ${weather.temp_min}`
-    [temp, tempMax, tempMin].forEach(element => {
-        element.class += 'block'
-    });
+
+    addClass([temp, tempMax, tempMin], 'block')
 
     tempHolder.append(temp, tempMax, tempMin)
-    main.append(tempHolder)
+    weatherDiv.append(tempHolder)
+    main.append(weatherDiv)
+}
 
 
+const addClass = (array, addClass) => {
+    array.forEach(element => {
+        element.class += addClass
+    });
 }
