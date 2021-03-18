@@ -50,15 +50,15 @@
 
 
 
-This is a project of the Javascript module. It is preceded by the lesson about Objects Oriented Programming and Functional Programming.
+This is a project of the Javascript module.
 
-Project: JavaScript project, small list ToDo app. [Assignment link](https://www.theodinproject.com/courses/javascript/lessons/todo-list)
+Project: JavaScript project, Weather App. [Assignment link](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 
 Visit the finished project website: [Live](https://jdmartinez1062.github.io/Weather-app/)
 <div style="text-align:center">
-  <a href="https://jdmartinez1062.github.io/Weather-app/">
-      <img src="aap.jpg" width="100%">
+  <a href="https://jdmartinez1062.github.io/Weather-App/">
+      <img src="app.jpg" width="100%">
   </a>
 </div>
 
