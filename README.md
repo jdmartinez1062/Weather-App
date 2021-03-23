@@ -55,7 +55,7 @@ This is a project of the Javascript module.
 Project: JavaScript project, Weather App. [Assignment link](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 
-Visit the finished project website: [Live](https://jdmartinez1062.github.io/Weather-app/)
+Visit the finished project website: [Live](https://jdmartinez1062.github.io/Weather-App/)
 <div style="text-align:center">
   <a href="https://jdmartinez1062.github.io/Weather-App/">
       <img src="app.jpg" width="100%">
