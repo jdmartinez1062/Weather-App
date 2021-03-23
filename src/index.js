@@ -1,5 +1,5 @@
 import Weather from './Weather';
-import showWeather from './DOM';
+import { showWeather, showError } from './DOM';
 
 const objectBuilder = (json) => {
   const mainJson = json.main;
@@ -35,10 +35,19 @@ const getWeather = async (city) => {
     { mode: 'cors' },
   )
     .then((response) => {
-      response.json().then((response) => {
-        showWeather(new Weather(...objectBuilder(response)));
-      });
-    });
+      if (response.ok) {
+        response.json().then((response) => {
+          showWeather(new Weather(...objectBuilder(response)));
+        });
+      }
+      else {
+        showError(`Error ${response.status + ' ' + response.statusText}`)
+      }
+    })
+    .catch((error) => {
+      showError(error)
+    })
+
 };
 
 window.onload = () => {

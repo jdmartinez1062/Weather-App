@@ -6,6 +6,18 @@ const deletePreviousContent = (parent) => {
   }
 };
 
+const showError = (error) => {
+  const errorDiv = document.getElementById('error');
+  const weatherDiv = document.getElementById('weather-info');
+  weatherDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';
+
+
+  const errorMessage = document.createElement('h4')
+  errorMessage.textContent = error
+  errorMessage.classList = 'p-0'
+  errorDiv.append(errorMessage)
+}
+
 const updateTemp = (weather, tempUnit) => {
   const temp = document.getElementById('temp');
   const tempMax = document.getElementById('temp-max');
@@ -41,6 +53,10 @@ const showWeather = (weather) => {
   const weatherDiv = document.getElementById('weather-info');
   weatherDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';
 
+  const error = document.getElementById('error')
+  error.classList = 'container-fluid mx-0 my-4 p-4'
+
+  deletePreviousContent(error);
   deletePreviousContent(weatherDiv);
 
   const generalInfo = document.createElement('div');
@@ -110,4 +126,4 @@ const showWeather = (weather) => {
   main.append(weatherDiv);
 };
 
-export default showWeather;
+export { showWeather, showError };
