@@ -9,6 +9,28 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayLikeToArray)\n/* harmony export */ });\nfunction _arrayLikeToArray(arr, len) {\n  if (len == null || len > arr.length) len = arr.length;\n\n  for (var i = 0, arr2 = new Array(len); i < len; i++) {\n    arr2[i] = arr[i];\n  }\n\n  return arr2;\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayWithoutHoles)\n/* harmony export */ });\n/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js\");\n\nfunction _arrayWithoutHoles(arr) {\n  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr);\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
@@ -17,6 +39,94 @@
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _asyncToGenerator)\n/* harmony export */ });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {\n  try {\n    var info = gen[key](arg);\n    var value = info.value;\n  } catch (error) {\n    reject(error);\n    return;\n  }\n\n  if (info.done) {\n    resolve(value);\n  } else {\n    Promise.resolve(value).then(_next, _throw);\n  }\n}\n\nfunction _asyncToGenerator(fn) {\n  return function () {\n    var self = this,\n        args = arguments;\n    return new Promise(function (resolve, reject) {\n      var gen = fn.apply(self, args);\n\n      function _next(value) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n      }\n\n      function _throw(err) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n      }\n\n      _next(undefined);\n    });\n  };\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _classCallCheck)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) {\n  if (!(instance instanceof Constructor)) {\n    throw new TypeError(\"Cannot call a class as a function\");\n  }\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/classCallCheck.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/construct.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/construct.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _construct)\n/* harmony export */ });\n/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ \"./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js\");\n/* harmony import */ var _isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isNativeReflectConstruct.js */ \"./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js\");\n\n\nfunction _construct(Parent, args, Class) {\n  if ((0,_isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__.default)()) {\n    _construct = Reflect.construct;\n  } else {\n    _construct = function _construct(Parent, args, Class) {\n      var a = [null];\n      a.push.apply(a, args);\n      var Constructor = Function.bind.apply(Parent, a);\n      var instance = new Constructor();\n      if (Class) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(instance, Class.prototype);\n      return instance;\n    };\n  }\n\n  return _construct.apply(null, arguments);\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/construct.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _isNativeReflectConstruct)\n/* harmony export */ });\nfunction _isNativeReflectConstruct() {\n  if (typeof Reflect === \"undefined\" || !Reflect.construct) return false;\n  if (Reflect.construct.sham) return false;\n  if (typeof Proxy === \"function\") return true;\n\n  try {\n    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));\n    return true;\n  } catch (e) {\n    return false;\n  }\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _iterableToArray)\n/* harmony export */ });\nfunction _iterableToArray(iter) {\n  if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter);\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/iterableToArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _nonIterableSpread)\n/* harmony export */ });\nfunction _nonIterableSpread() {\n  throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _setPrototypeOf)\n/* harmony export */ });\nfunction _setPrototypeOf(o, p) {\n  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {\n    o.__proto__ = p;\n    return o;\n  };\n\n  return _setPrototypeOf(o, p);\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _toConsumableArray)\n/* harmony export */ });\n/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js\");\n/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/iterableToArray.js\");\n/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js\");\n/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ \"./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js\");\n\n\n\n\nfunction _toConsumableArray(arr) {\n  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__.default)();\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _unsupportedIterableToArray)\n/* harmony export */ });\n/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js\");\n\nfunction _unsupportedIterableToArray(o, minLen) {\n  if (!o) return;\n  if (typeof o === \"string\") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);\n  var n = Object.prototype.toString.call(o).slice(8, -1);\n  if (n === \"Object\" && o.constructor) n = o.constructor.name;\n  if (n === \"Map\" || n === \"Set\") return Array.from(o);\n  if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);\n}\n\n//# sourceURL=webpack://my-webpack-project/./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js?");
 
 /***/ }),
 
@@ -30,6 +140,39 @@ eval("module.exports = __webpack_require__(/*! regenerator-runtime */ \"./node_m
 
 /***/ }),
 
+/***/ "./src/DOM.js":
+/*!********************!*\
+  !*** ./src/DOM.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showWeather\": () => (/* binding */ showWeather),\n/* harmony export */   \"showError\": () => (/* binding */ showError)\n/* harmony export */ });\n/* harmony import */ var _calculations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calculations */ \"./src/calculations.js\");\n\n\nvar deletePreviousContent = function deletePreviousContent(parent) {\n  while (parent.lastChild) {\n    parent.removeChild(parent.lastChild);\n  }\n};\n\nvar changeColor = function changeColor() {\n  var body = document.getElementsByTagName('body')[0];\n  body.style.backgroundColor = body.style.backgroundColor === 'rgb(251, 238, 196)' ? 'rgb(247, 232, 164)' : 'rgb(251, 238, 196)';\n};\n\nvar showError = function showError(error) {\n  changeColor();\n  var errorDiv = document.getElementById('error');\n  deletePreviousContent(errorDiv);\n  var weatherDiv = document.getElementById('weather-info');\n  deletePreviousContent(weatherDiv);\n  errorDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';\n  weatherDiv.classList = 'container-fluid mx-0 my-4';\n  var errorMessage = document.createElement('h4');\n  errorMessage.textContent = error;\n  errorMessage.classList = 'p-0';\n  errorDiv.append(errorMessage);\n};\n\nvar updateTemp = function updateTemp(weather, tempUnit) {\n  var temp = document.getElementById('temp');\n  var tempMax = document.getElementById('temp-max');\n  var tempMin = document.getElementById('temp-min');\n\n  if (tempUnit === '°C') {\n    temp.textContent = \"Current Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.celcius)(weather.temp), \" \\xB0C\");\n    tempMax.textContent = \"Maximum Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.celcius)(weather.temp_max), \" \\xB0C\");\n    tempMin.textContent = \"Minimum Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.celcius)(weather.temp_min), \" \\xB0C\");\n  } else {\n    temp.textContent = \"Current Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.farenheit)(weather.temp), \" \\xB0F\");\n    tempMax.textContent = \"Maximum Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.farenheit)(weather.temp_max), \" \\xB0F\");\n    tempMin.textContent = \"Minimum Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.farenheit)(weather.temp_min), \" \\xB0F\");\n  }\n};\n\nvar addClass = function addClass(array, _addClass) {\n  array.forEach(function (element) {\n    element[\"class\"] += _addClass;\n  });\n};\n\nvar showWeather = function showWeather(weather) {\n  changeColor();\n  var main = document.getElementById('main');\n  var weatherDiv = document.getElementById('weather-info');\n  weatherDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';\n  var error = document.getElementById('error');\n  error.classList = 'container-fluid mx-0 my-4 p-4';\n  deletePreviousContent(error);\n  deletePreviousContent(weatherDiv);\n  var generalInfo = document.createElement('div');\n  var tempHolder = document.createElement('div');\n  tempHolder.id = 'temp-holder';\n  var location = document.createElement('h3');\n  location.textContent = weather.location;\n  var weatherText = document.createElement('p');\n  weatherText.textContent = \"Current weather: \".concat(weather.weather);\n  var weatherDescription = document.createElement('p');\n  weatherDescription.textContent = \"Description: \".concat(weather.weatherDescription);\n  addClass([location, weatherText, weatherDescription], 'block');\n  generalInfo.append(location, weatherText, weatherDescription);\n  var temp = document.createElement('p');\n  temp.id = 'temp';\n  temp.textContent = \"Current Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.celcius)(weather.temp), \" \\xB0C\");\n  var tempMax = document.createElement('p');\n  tempMax.id = 'temp-max';\n  tempMax.textContent = \"Maximum Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.celcius)(weather.temp_max), \" \\xB0C\");\n  var tempMin = document.createElement('p');\n  tempMin.id = 'temp-min';\n  tempMin.textContent = \"Minimum Temperature: \".concat((0,_calculations__WEBPACK_IMPORTED_MODULE_0__.celcius)(weather.temp_min), \" \\xB0C\");\n  addClass([temp, tempMax, tempMin], 'block');\n  var close = document.createElement('button');\n  close.type = 'button';\n  close.setAttribute('class', 'btn-close close');\n  close.setAttribute('aria-label', 'Close');\n  close.addEventListener('click', function () {\n    deletePreviousContent(weatherDiv);\n    weatherDiv.classList = 'container-fluid mx-0 my-4';\n    changeColor();\n  });\n  var toogle = document.createElement('div');\n  toogle.classList = 'd-flex align-items-center py-3';\n  var toogleText = document.createElement('p');\n  var toogleTemp = document.createElement('input');\n  var toogleTempLabel = document.createElement('label');\n  toogleText.textContent = 'Click to change the unit of temperature:';\n  toogle.append(toogleText, toogleTemp, toogleTempLabel);\n  toogleTempLabel.textContent = '°C';\n  toogleTempLabel.classList = 'btn btn-primary m-0';\n  toogleTempLabel[\"for\"] = 'btn-check';\n  toogleTemp.type = 'checkbox';\n  toogleTemp.classList = 'btn-check m-0';\n  toogleTempLabel.id = 'btn-check';\n  toogleTempLabel.addEventListener('click', function () {\n    toogleTempLabel.textContent = toogleTempLabel.textContent === '°C' ? '°F' : '°C';\n    updateTemp(weather, toogleTempLabel.textContent);\n  });\n  tempHolder.append(temp, tempMax, tempMin);\n  weatherDiv.append(close, toogle, generalInfo, tempHolder);\n  main.append(weatherDiv);\n};\n\n\n\n//# sourceURL=webpack://my-webpack-project/./src/DOM.js?");
+
+/***/ }),
+
+/***/ "./src/Weather.js":
+/*!************************!*\
+  !*** ./src/Weather.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/esm/classCallCheck.js\");\n\n\nvar capitalizeFirstLetter = function capitalizeFirstLetter(string) {\n  return string.charAt(0).toUpperCase() + string.slice(1);\n};\n\nvar Weather = function Weather(location, weather, weatherDescription, temp, tempMin, tempMax, tempFeel, humidity, sunRise, sunSet) {\n  (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__.default)(this, Weather);\n\n  this.location = capitalizeFirstLetter(location);\n  this.weather = capitalizeFirstLetter(weather);\n  this.weatherDescription = capitalizeFirstLetter(weatherDescription);\n  this.temp = temp;\n  this.temp_min = tempMin;\n  this.temp_max = tempMax;\n  this.temp_feel = tempFeel;\n  this.humidity = humidity;\n  this.sun_rise = sunRise;\n  this.sun_set = sunSet;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Weather);\n\n//# sourceURL=webpack://my-webpack-project/./src/Weather.js?");
+
+/***/ }),
+
+/***/ "./src/calculations.js":
+/*!*****************************!*\
+  !*** ./src/calculations.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"celcius\": () => (/* binding */ celcius),\n/* harmony export */   \"farenheit\": () => (/* binding */ farenheit)\n/* harmony export */ });\n/* eslint-disable no-mixed-operators */\nvar celcius = function celcius(temp) {\n  return Math.round((temp - 273.15) * 10) / 10;\n};\n\nvar farenheit = function farenheit(temp) {\n  return Math.round((celcius(temp) * 9 / 5 + 32) * 10) / 10;\n};\n\n\n\n//# sourceURL=webpack://my-webpack-project/./src/calculations.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -37,7 +180,7 @@ eval("module.exports = __webpack_require__(/*! regenerator-runtime */ \"./node_m
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar getWeather = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(city) {\n    var API_KEY;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            API_KEY = \"e88a6f60008b01493b86cacd829f692b\";\n            fetch(\"https://api.openweathermap.org/data/2.5/weather?q=\".concat(city, \"&appid=\").concat(API_KEY), {\n              mode: 'cors'\n            }).then(function (response) {\n              console.log(response.json());\n            })[\"catch\"](function (err) {\n              console.log(err);\n            });\n\n          case 2:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function getWeather(_x) {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nwindow.onload = function () {\n  getWeather(\"London\");\n};\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/construct */ \"./node_modules/@babel/runtime/helpers/esm/construct.js\");\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _Weather__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Weather */ \"./src/Weather.js\");\n/* harmony import */ var _DOM__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DOM */ \"./src/DOM.js\");\n\n\n\n\n\n\n\nvar objectBuilder = function objectBuilder(json) {\n  var mainJson = json.main;\n  var weather = json.weather[0].main;\n  var weatherDescription = json.weather[0].description;\n  var temp = mainJson.temp;\n  var tempMin = mainJson.temp_min;\n  var tempMax = mainJson.temp_max;\n  var feelsLike = mainJson.feels_like;\n  var humidity = mainJson.humidity;\n  var sunRise = new Date(json.sys.sunrise * 1000);\n  var sunSet = new Date(json.sys.sunset * 1000);\n  var location = json.name;\n  return [location, weather, weatherDescription, temp, tempMin, tempMax, feelsLike, humidity, sunRise, sunSet];\n};\n\nvar getWeather = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().mark(function _callee(city) {\n    var API_KEY;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            API_KEY = 'e88a6f60008b01493b86cacd829f692b';\n            fetch(\"https://api.openweathermap.org/data/2.5/weather?q=\".concat(city, \"&appid=\").concat(API_KEY), {\n              mode: 'cors'\n            }).then(function (response) {\n              if (response.ok) {\n                response.json().then(function (response) {\n                  (0,_DOM__WEBPACK_IMPORTED_MODULE_5__.showWeather)((0,_babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_0__.default)(_Weather__WEBPACK_IMPORTED_MODULE_4__.default, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__.default)(objectBuilder(response))));\n                });\n              } else {\n                (0,_DOM__WEBPACK_IMPORTED_MODULE_5__.showError)(\"Error \".concat(\"\".concat(response.status, \" \").concat(response.statusText)));\n              }\n            })[\"catch\"](function (error) {\n              (0,_DOM__WEBPACK_IMPORTED_MODULE_5__.showError)(error);\n            });\n\n          case 2:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function getWeather(_x) {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nwindow.onload = function () {\n  document.getElementById('search-button').addEventListener('click', function () {\n    var cityField = document.getElementById('city');\n    var city = cityField.value;\n    getWeather(city);\n  });\n};\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
 
 /***/ }),
 
