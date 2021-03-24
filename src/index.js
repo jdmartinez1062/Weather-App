@@ -39,15 +39,13 @@ const getWeather = async (city) => {
         response.json().then((response) => {
           showWeather(new Weather(...objectBuilder(response)));
         });
-      }
-      else {
-        showError(`Error ${response.status + ' ' + response.statusText}`)
+      } else {
+        showError(`Error ${`${response.status} ${response.statusText}`}`);
       }
     })
     .catch((error) => {
-      showError(error)
-    })
-
+      showError(error);
+    });
 };
 
 window.onload = () => {

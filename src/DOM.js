@@ -6,7 +6,13 @@ const deletePreviousContent = (parent) => {
   }
 };
 
+const changeColor = () => {
+  const body = document.getElementsByTagName('body')[0];
+  body.style.backgroundColor = body.style.backgroundColor === 'rgb(251, 238, 196)' ? 'rgb(247, 232, 164)' : 'rgb(251, 238, 196)';
+};
+
 const showError = (error) => {
+  changeColor();
   const errorDiv = document.getElementById('error');
   deletePreviousContent(errorDiv);
 
@@ -16,11 +22,11 @@ const showError = (error) => {
   errorDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';
   weatherDiv.classList = 'container-fluid mx-0 my-4';
 
-  const errorMessage = document.createElement('h4')
-  errorMessage.textContent = error
-  errorMessage.classList = 'p-0'
-  errorDiv.append(errorMessage)
-}
+  const errorMessage = document.createElement('h4');
+  errorMessage.textContent = error;
+  errorMessage.classList = 'p-0';
+  errorDiv.append(errorMessage);
+};
 
 const updateTemp = (weather, tempUnit) => {
   const temp = document.getElementById('temp');
@@ -53,12 +59,13 @@ const addClass = (array, addClass) => {
 };
 
 const showWeather = (weather) => {
+  changeColor();
   const main = document.getElementById('main');
   const weatherDiv = document.getElementById('weather-info');
   weatherDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';
 
-  const error = document.getElementById('error')
-  error.classList = 'container-fluid mx-0 my-4 p-4'
+  const error = document.getElementById('error');
+  error.classList = 'container-fluid mx-0 my-4 p-4';
 
   deletePreviousContent(error);
   deletePreviousContent(weatherDiv);
@@ -98,6 +105,7 @@ const showWeather = (weather) => {
   close.addEventListener('click', () => {
     deletePreviousContent(weatherDiv);
     weatherDiv.classList = 'container-fluid mx-0 my-4';
+    changeColor();
   });
 
   const toogle = document.createElement('div');
@@ -129,5 +137,6 @@ const showWeather = (weather) => {
   weatherDiv.append(close, toogle, generalInfo, tempHolder);
   main.append(weatherDiv);
 };
+
 
 export { showWeather, showError };
