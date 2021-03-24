@@ -8,11 +8,13 @@ const deletePreviousContent = (parent) => {
 
 const showError = (error) => {
   const errorDiv = document.getElementById('error');
-  deletePreviousContent(errorDiv)
+  deletePreviousContent(errorDiv);
 
   const weatherDiv = document.getElementById('weather-info');
-  weatherDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';
+  deletePreviousContent(weatherDiv);
 
+  errorDiv.classList = 'container-fluid mx-0 my-4 border rounded p-4';
+  weatherDiv.classList = 'container-fluid mx-0 my-4';
 
   const errorMessage = document.createElement('h4')
   errorMessage.textContent = error
